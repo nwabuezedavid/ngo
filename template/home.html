@@ -1170,9 +1170,7 @@ data-elementor-post-type="page"
           data-widget_type="text-editor.default"
         >
           <div class="elementor-widget-container">
-            Over 50 million lives impacted with SRH, Family Planning,
-            MNCH, HIV/AIDS, TB, Malaria &amp; other public health
-            interventions
+          {{home.h3}}
           </div>
         </div>
       </div>
@@ -1201,7 +1199,7 @@ data-elementor-post-type="page"
               >
                 <img
                   decoding="async"
-                  src="{% static 'main/th-homepage-video-p16alkr5pcy5n3gw27va6gygl8d589jlcn7mscfy9w.jpg'%}"
+                  src="{{home.h1image}}"
                   title="th-homepage-video"
                   alt="th-homepage-video"
                   loading="lazy"
@@ -1270,8 +1268,7 @@ data-elementor-post-type="page"
         >
           <div class="elementor-widget-container">
             <p>
-              Over 120 innovative development projects implemented in
-              Nigeria
+             {{home.h4}}
             </p>
           </div>
         </div>
@@ -1369,7 +1366,7 @@ data-elementor-post-type="page"
         >
           <div class="elementor-widget-container">
             <h2 class="elementor-heading-title elementor-size-default">
-              {{site.name}}Clinic
+              {{site.name}} Clinic
             </h2>
           </div>
         </div>
@@ -1384,7 +1381,7 @@ data-elementor-post-type="page"
               decoding="async"
               width="800"
               height="477"
-              src="{% static 'main/ARFH-Clinic-ward3.jpg' %}"
+              src="{{home.slide4}}"
               class="attachment-large size-large wp-image-3841"
               alt=""
                
@@ -1399,10 +1396,7 @@ data-elementor-post-type="page"
         >
           <div class="elementor-widget-container">
             <p>
-              Named after the late Prof. Olikoye Ransome-Kuti, the ARFH
-              Clinic is a model community health centre improving access
-              to quality health care and harnessing community capacities
-              for sustainable development.
+              {{home.h5}}
             </p>
           </div>
         </div>
@@ -1416,7 +1410,7 @@ data-elementor-post-type="page"
             <div class="elementor-button-wrapper">
               <a
                 class="elementor-button elementor-button-link elementor-size-md"
-                href="https://arfh-ng.org/services/"
+                href="service/"
               >
                 <span class="elementor-button-content-wrapper">
                   <span class="elementor-button-icon">
@@ -1487,41 +1481,42 @@ data-elementor-post-type="page"
             <div
               class="elementor-posts-container elementor-posts elementor-posts--skin-cards elementor-grid elementor-has-item-ratio"
             >
-              <article
+              
+            
+{% for i in  news|slice:":3" %}           
+            
+           <article
                 class="elementor-post elementor-grid-item post-13499 post type-post status-publish format-standard has-post-thumbnail hentry category-news-stories category-project-update tag-dmpasc tag-empoweringwomen tag-familyplanning tag-healthycommunities tag-worldcontraceptionday tag-yobestate tag-{{site.name}}tag-codsain"
               >
                 <div class="elementor-post__card">
                   <a
                     class="elementor-post__thumbnail__link"
-                    href=""
+                    href="{% url 'newdetail' i.uuids %}"
                     ><div class="elementor-post__thumbnail">
                       <img
                         decoding="async"
                         width="225"
                         height="300"
-                        src="{% static 'main/WhatsApp-Image-2024-09-30-at-09.28.05-1-225x300.jpeg'%}"
+                        src="{{i.imagex}}"
                         class="attachment-medium size-medium wp-image-13505"
-                        alt=""
+                        alt="{{i.title}}"
                         
                       /></div
                   ></a>
                   <div class="elementor-post__badge">
-                    News &amp; Stories
+                    {{i.label}}
                   </div>
                   <div class="elementor-post__text">
                     <h3 class="elementor-post__title">
                       <a
-                        href=""
+                        href="{% url 'newdetail' i.uuids %}"
                       >
-                        A glimpse from World Contraception Day in Yobe
-                        State
+                      {{i.title}}
                       </a>
                     </h3>
                     <div class="elementor-post__excerpt">
                       <p>
-                        In partnership with the Yobe State Ministry of
-                        Health, the PHCDB, and Roadmap for Women and Youth
-                        Development successfully raised
+                        {{i.header}}
                       </p>
                     </div>
 
@@ -1535,135 +1530,12 @@ data-elementor-post-type="page"
                   </div>
                   <div class="elementor-post__meta-data">
                     <span class="elementor-post-date">
-                      September 30, 2024
+                      {{i.date}}
                     </span>
                   </div>
                 </div>
               </article>
-              <article
-                class="elementor-post elementor-grid-item post-13491 post type-post status-publish format-standard has-post-thumbnail hentry category-news-stories tag-dmpasc tag-empoweringwomen tag-familyplanning tag-healthycommunities tag-nigerstate tag-worldcontraceptionday tag-{{site.name}}tag-codsain"
-              >
-                <div class="elementor-post__card">
-                  <a
-                    class="elementor-post__thumbnail__link"
-                    href="https://arfh-ng.org/news-stories/a-glimpse-from-world-contraception-day-in-kano-state/"
-                    ><div
-                      class="elementor-post__thumbnail elementor-fit-height"
-                    >
-                      <img
-                        loading="lazy"
-                        decoding="async"
-                        width="300"
-                        height="142"
-                        src="{% static 'main/WhatsApp-Image-2024-09-30-at-09.28.43-2-300x142.jpeg'%}"
-                        class="attachment-medium size-medium wp-image-13494"
-                        alt=""
-                        titls="
-                          https://arfh-ng.org/wp-content/uploads/2024/09/WhatsApp-Image-2024-09-30-at-09.28.43-2-300x142.jpeg'%}  300w,
-                          https://arfh-ng.org/wp-content/uploads/2024/09/WhatsApp-Image-2024-09-30-at-09.28.43-2-768x363.jpeg'%}  768w,
-                          https://arfh-ng.org/wp-content/uploads/2024/09/WhatsApp-Image-2024-09-30-at-09.28.43-2.jpeg'%}         1008w
-                        "
-                        sizes="(max-width: 300px) 100vw, 300px"
-                      /></div
-                  ></a>
-                  <div class="elementor-post__badge">
-                    News &amp; Stories
-                  </div>
-                  <div class="elementor-post__text">
-                    <h3 class="elementor-post__title">
-                      <a
-                        href="https://arfh-ng.org/news-stories/a-glimpse-from-world-contraception-day-in-kano-state/"
-                      >
-                        A glimpse from World Contraception Day in
-                        Kano&nbsp;State
-                      </a>
-                    </h3>
-                    <div class="elementor-post__excerpt">
-                      <p>
-                        ARFH, in collaboration with the Kano State
-                        Ministry of Health, the PHCDB and Youth and
-                        Environmental Development Association (YEDA)
-                        successfully
-                      </p>
-                    </div>
-
-                    <a
-                      class="elementor-post__read-more"
-                      href="https://arfh-ng.org/news-stories/a-glimpse-from-world-contraception-day-in-kano-state/"
-                      aria-label="Read more about A glimpse from World Contraception Day in Kano State"
-                    >
-                      Read Story »
-                    </a>
-                  </div>
-                  <div class="elementor-post__meta-data">
-                    <span class="elementor-post-date">
-                      September 30, 2024
-                    </span>
-                  </div>
-                </div>
-              </article>
-              <article
-                class="elementor-post elementor-grid-item post-13478 post type-post status-publish format-standard has-post-thumbnail hentry category-news-stories tag-dmpasc tag-empoweringwomen tag-familyplanning tag-healthycommunities tag-nasarawastate tag-worldcontraceptionday tag-{{site.name}}tag-codsain"
-              >
-                <div class="elementor-post__card">
-                  <a
-                    class="elementor-post__thumbnail__link"
-                    href="https://arfh-ng.org/news-stories/a-glimpse-from-world-contraception-day-in-nasarawa-state/"
-                    ><div
-                      class="elementor-post__thumbnail elementor-fit-height"
-                    >
-                      <img
-                        loading="lazy"
-                        decoding="async"
-                        width="300"
-                        height="135"
-                        src="{% static 'main/WhatsApp-Image-2024-09-27-at-19.37.43-1-1-300x135.jpeg'%}"
-                        class="attachment-medium size-medium wp-image-13489"
-                        alt=""
-                        titls="
-                          https://arfh-ng.org/wp-content/uploads/2024/09/WhatsApp-Image-2024-09-27-at-19.37.43-1-1-300x135.jpeg'%}  300w,
-                          https://arfh-ng.org/wp-content/uploads/2024/09/WhatsApp-Image-2024-09-27-at-19.37.43-1-1-768x346.jpeg'%}  768w,
-                          https://arfh-ng.org/wp-content/uploads/2024/09/WhatsApp-Image-2024-09-27-at-19.37.43-1-1.jpeg'%}         1000w
-                        "
-                        sizes="(max-width: 300px) 100vw, 300px"
-                      /></div
-                  ></a>
-                  <div class="elementor-post__badge">
-                    News &amp; Stories
-                  </div>
-                  <div class="elementor-post__text">
-                    <h3 class="elementor-post__title">
-                      <a
-                        href="https://arfh-ng.org/news-stories/a-glimpse-from-world-contraception-day-in-nasarawa-state/"
-                      >
-                        A glimpse from World Contraception Day in Nasarawa
-                        State
-                      </a>
-                    </h3>
-                    <div class="elementor-post__excerpt">
-                      <p>
-                        ARFH, alongside the Nasarawa State Ministry of
-                        Health, the PHCDA/Board, and Family Health Care
-                        Foundation (FAHCI) organized awareness activities
-                        and
-                      </p>
-                    </div>
-
-                    <a
-                      class="elementor-post__read-more"
-                      href="https://arfh-ng.org/news-stories/a-glimpse-from-world-contraception-day-in-nasarawa-state/"
-                      aria-label="Read more about A glimpse from World Contraception Day in Nasarawa State"
-                    >
-                      Read Story »
-                    </a>
-                  </div>
-                  <div class="elementor-post__meta-data">
-                    <span class="elementor-post-date">
-                      September 30, 2024
-                    </span>
-                  </div>
-                </div>
-              </article>
+         {% endfor %}
             </div>
           </div>
         </div>
@@ -1696,7 +1568,7 @@ data-elementor-post-type="page"
                     <div class="elementor-button-wrapper">
                       <a
                         class="elementor-button elementor-button-link elementor-size-sm"
-                        href=""
+                        href="{% url 'newstory'  %}"
                       >
                         <span class="elementor-button-content-wrapper">
                           <span class="elementor-button-text"

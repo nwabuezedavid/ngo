@@ -77,15 +77,34 @@ class aboutuse(models.Model):
     
     def __str__(self):
         return f'the userid {self.uuids}-{self.title}'
+class reportx(models.Model):
+    uuids = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    title = models.CharField( max_length=500 ,blank=True, null=True,)
+    body = models.TextField(  blank=True, null=True,)
+    image = models.TextField( max_length=500 ,blank=True, null=True,)
+    date = models.DateField( max_length=500 ,blank=True, null=True,)
+    
+    def __str__(self):
+        return f'the userid {self.uuids}-{self.title}'
+class teams(models.Model):
+    uuids = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    name = models.CharField( max_length=500 ,blank=True, null=True,)
+    position = models.TextField(  blank=True, null=True,)
+    image = models.TextField( max_length=500 ,blank=True, null=True,)
+    date = models.DateField( max_length=500 ,blank=True, null=True,)
+    
+    def __str__(self):
+        return f'the userid {self.name} '
 class job(models.Model):
     uuids = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     title = models.CharField( max_length=500 ,blank=True, null=True,)
     state = models.CharField(  max_length=500 , blank=True, null=True,)
     Status = models.CharField(  max_length=500 , blank=True, null=True,)
+    TYPE = models.CharField(  max_length=500 , blank=True, null=True,)
     view = models.IntegerField(    blank=True, null=True,)
-    body = models.TextField( max_length=500 ,blank=True, null=True,)
+    body = models.TextField( blank=True, null=True,)
     date = models.DateField( max_length=500 ,blank=True, null=True,)
-    idx = models.IntegerField( default=1) 
+    closedate = models.DateField( max_length=500 ,blank=True, null=True,)
     
     def __str__(self):
         return f'the userid {self.uuids}-{self.title}'

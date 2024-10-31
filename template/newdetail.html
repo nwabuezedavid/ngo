@@ -21,7 +21,7 @@
             </div>
 </div>
     </div>
-</section>
+a</section>
 <section data-particle_enable="false" data-particle-mobile-disabled="false" class="elementor-section elementor-top-section elementor-element elementor-element-6b653035 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="6b653035" data-element_type="section">
         <div class="elementor-container elementor-column-gap-default">
     <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-364555b4" data-id="364555b4" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
@@ -39,21 +39,21 @@
                 <svg aria-hidden="true" class="e-font-icon-svg e-fas-folder-open" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><path d="M572.694 292.093L500.27 416.248A63.997 63.997 0 0 1 444.989 448H45.025c-18.523 0-30.064-20.093-20.731-36.093l72.424-124.155A64 64 0 0 1 152 256h399.964c18.523 0 30.064 20.093 20.73 36.093zM152 224h328v-48c0-26.51-21.49-48-48-48H272l-64-64H48C21.49 64 0 85.49 0 112v278.046l69.077-118.418C86.214 242.25 117.989 224 152 224z"></path></svg>							</span>
                     <span class="elementor-icon-list-text elementor-post-info__item elementor-post-info__item--type-terms">
                         <span class="elementor-post-info__terms-list">
-<a href="https://arfh-ng.org/category/news-stories/" class="elementor-post-info__terms-list-item">News &amp; Stories</a>, <a href="https://arfh-ng.org/category/project-update/" class="elementor-post-info__terms-list-item">Project Update</a>				</span>
+<a href="{% url 'newstory' %}" class="elementor-post-info__terms-list-item">News &amp; Stories</a>, <a href="{% url 'projectupdate' %}" class="elementor-post-info__terms-list-item">Project Update</a>				</span>
     </span>
                 </li>
 <li class="elementor-icon-list-item elementor-repeater-item-6bd1949 elementor-inline-item" itemprop="datePublished">
                         <span class="elementor-icon-list-icon">
                 <svg aria-hidden="true" class="e-font-icon-svg e-fas-calendar" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M12 192h424c6.6 0 12 5.4 12 12v260c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V204c0-6.6 5.4-12 12-12zm436-44v-36c0-26.5-21.5-48-48-48h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v36c0 6.6 5.4 12 12 12h424c6.6 0 12-5.4 12-12z"></path></svg>							</span>
                     <span class="elementor-icon-list-text elementor-post-info__item elementor-post-info__item--type-date">
-                        October 17, 2024					</span>
+                        {{item.date}}					</span>
                 </li>
 <li class="elementor-icon-list-item elementor-repeater-item-8b3339c elementor-inline-item">
-        <a href="https://arfh-ng.org/news-and-stories/">
+        <a href="{% url 'newstory' %}">
                             <span class="elementor-icon-list-icon">
                 <svg aria-hidden="true" class="e-font-icon-svg e-fas-long-arrow-alt-left" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M134.059 296H436c6.627 0 12-5.373 12-12v-56c0-6.627-5.373-12-12-12H134.059v-46.059c0-21.382-25.851-32.09-40.971-16.971L7.029 239.029c-9.373 9.373-9.373 24.569 0 33.941l86.059 86.059c15.119 15.119 40.971 4.411 40.971-16.971V296z"></path></svg>							</span>
                     <span class="elementor-icon-list-text elementor-post-info__item elementor-post-info__item--type-custom">
-                        All News &amp; Stories					</span>
+                       {{item.label}}				</span>
                     </a>
 </li>
 </ul>
@@ -62,37 +62,22 @@
 <div class="elementor-element elementor-element-3087a80b elementor-widget elementor-widget-theme-post-content" data-id="3087a80b" data-element_type="widget" data-widget_type="theme-post-content.default">
 <div class="elementor-widget-container">
 <div class="xdj266r x11i5rnm xat24cr x1mh8g0r x1vvkbs x126k92a">
-<div dir="auto">Last week, we officially kick started our <span class="html-span xdj266r x11i5rnm xat24cr x1mh8g0r xexx8yu x4uap5 x18d9i69 xkhd6sd x1hl2dhg x16tdsg8 x1vvkbs"><a class="x1i10hfl xjbqb8w x1ejq31n xd10rxx x1sy0etr x17r0tee x972fbf xcfux6l x1qhh985 xm0m39n x9f619 x1ypdohk xt0psk2 xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r xexx8yu x4uap5 x18d9i69 xkhd6sd x16tdsg8 x1hl2dhg xggy1nq x1a2a7pz x1sur9pj xkrqix3 x1fey0fg x1s688f" tabindex="0" role="link" href="https://www.facebook.com/USAIDNigeria?__cft__[0]=AZUZb1FO4tZ4PX37-K5NtnyhL0SQN0vq9z0iQ8d8a5Ap_rSInta39_AAkchgjfQSLeKyNxvQ5i6X9BRemSeOeRxlq0k3QsxrcbD5DZV0JrdR7Iieoi6qAvMN-ehzz_e7nlBhaWqf8opVcmqh9TojrnoMXYmndCiZLosp65aOxZ2EhQ_dEHHhBEt3CFG6VVAv7i8&amp;__tn__=-]K-R"><span class="xt0psk2">USAID/Nigeria</span></a></span> supported ICHSSA-2 project Tech4AYP initiative with the onboarding of 90 adolescents and Case Managers at National Information Technology&nbsp; Hub (NitHub), University of Lagos. The 90 beneficiaries who were drawn from across the 11 LGAs where we work in Lagos will learn various digital skills for a period of 12 weeks ranging from mobile app development, front end web development, product design (UI/UX), data analytics and graphics design. The training is designed to equip and meet the needs of the beneficiaries including hands-on sessions, weekly assignments and end of project task to be submitted and graded in line with NitHub guidelines.</div>
+<div dir="auto">
+    {{item.body}}
 </div>
 <div class="x11i5rnm xat24cr x1mh8g0r x1vvkbs xtlvy1s x126k92a">
 <div dir="auto"></div>
 </div>
-<div class="x11i5rnm xat24cr x1mh8g0r x1vvkbs xtlvy1s x126k92a">
-<div dir="auto">The Tech4AYP initiative is focused on promoting digital literacy and building the capacity of vulnerable adolescents and young person’s to gain in-demand and thriving digital skills that will enable them to compete and work from anywhere. In addition, Tech4AYP will promote digital inclusion, create access to decent work and entrepreneurship opportunities for vulnerable adolescents and young person’s living in Lagos.</div>
+ 
 <div dir="auto"></div>
-</div>
-<div class="x11i5rnm xat24cr x1mh8g0r x1vvkbs xtlvy1s x126k92a">
-<div dir="auto">While giving his welcome address, Dr Victor Odumuyiwa, Director of Nithub, Unilag introduced the beneficiaries to the 3 pillars of NitHub- talent upscaling, product innovation and startup incubation. He encouraged the beneficiaries to engage in continuous learning and exploration of opportunities provided by the hub.</div>
-<div dir="auto"></div>
-</div>
-<div class="x11i5rnm xat24cr x1mh8g0r x1vvkbs xtlvy1s x126k92a">
-<div dir="auto">In his special address, Dr Felix Iwuala, ICHSSA-2 Chief of Party lauded USAID and ARFH’s commitment to youth development. He advised participants to choose skill classes based on their strengths and to avoid fraudulent activities, focusing instead on legitimate income streams. There are other packs that comes with this training courtesy of USAID- laptops, internet modems and subscription, transportation allowance among others. Dr Iwuala stated.</div>
-<div dir="auto"></div>
-</div>
-<div class="x11i5rnm xat24cr x1mh8g0r x1vvkbs xtlvy1s x126k92a">
-<div dir="auto">Mrs. Abiola Oshifowokan, representative of the Lagos State Ministry of Youth and Social Development congratulated participants and thanked USAID and ARFH for their support in empowering young people with digital skills. She urged the beneficiaries to justify the investments by shunning crimes and adding value to their communities.</div>
-<div dir="auto"></div>
-</div>
-<div class="x11i5rnm xat24cr x1mh8g0r x1vvkbs xtlvy1s x126k92a">
-<div dir="auto">In a rapidly evolving world, digitalization is gaining widespread significance across countries, as it can help enhance education, reduce youth unemployment, and promote socioeconomic development, but for majority of the vulnerable adolescents and young people, this is still a distant dream. At ARFH, we prioritize meaningful collaboration to create limitless opportunities for the vulnerable populations that we serve.</div>
-<div dir="auto"></div>
-</div>
-<div class="x11i5rnm xat24cr x1mh8g0r x1vvkbs xtlvy1s x126k92a">
-<div dir="auto">Tech4AYP is a dream come true for us as we hope to see these beneficiaries go on to access opportunities, build great digital products and do amazing things with their tech skills. Many thanks to our funders- USAID/Nigeria.</div>
-</div>
-<div dir="auto"></div>
-<div dir="auto"><img fetchpriority="high" decoding="async" class="alignnone size-medium wp-image-13524" src="https://arfh-ng.org/wp-content/uploads/2024/10/1-300x200.jpg" alt="" width="300" height="200" srcset="https://arfh-ng.org/wp-content/uploads/2024/10/1-300x200.jpg 300w, https://arfh-ng.org/wp-content/uploads/2024/10/1-1024x683.jpg 1024w, https://arfh-ng.org/wp-content/uploads/2024/10/1-768x512.jpg 768w, https://arfh-ng.org/wp-content/uploads/2024/10/1-1536x1024.jpg 1536w, https://arfh-ng.org/wp-content/uploads/2024/10/1-2048x1365.jpg 2048w" sizes="(max-width: 300px) 100vw, 300px"> <img decoding="async" class="alignnone size-medium wp-image-13525" src="https://arfh-ng.org/wp-content/uploads/2024/10/2-2-300x200.jpg" alt="" width="300" height="200" srcset="https://arfh-ng.org/wp-content/uploads/2024/10/2-2-300x200.jpg 300w, https://arfh-ng.org/wp-content/uploads/2024/10/2-2-1024x683.jpg 1024w, https://arfh-ng.org/wp-content/uploads/2024/10/2-2-768x512.jpg 768w, https://arfh-ng.org/wp-content/uploads/2024/10/2-2-1536x1024.jpg 1536w, https://arfh-ng.org/wp-content/uploads/2024/10/2-2-2048x1365.jpg 2048w" sizes="(max-width: 300px) 100vw, 300px"> <img decoding="async" class="alignnone size-medium wp-image-13526" src="https://arfh-ng.org/wp-content/uploads/2024/10/3-300x200.jpg" alt="" width="300" height="200" srcset="https://arfh-ng.org/wp-content/uploads/2024/10/3-300x200.jpg 300w, https://arfh-ng.org/wp-content/uploads/2024/10/3-1024x683.jpg 1024w, https://arfh-ng.org/wp-content/uploads/2024/10/3-768x512.jpg 768w, https://arfh-ng.org/wp-content/uploads/2024/10/3-1536x1024.jpg 1536w, https://arfh-ng.org/wp-content/uploads/2024/10/3-2048x1365.jpg 2048w" sizes="(max-width: 300px) 100vw, 300px"> <img loading="lazy" decoding="async" class="alignnone size-medium wp-image-13527" src="https://arfh-ng.org/wp-content/uploads/2024/10/4-300x200.jpg" alt="" width="300" height="200" srcset="https://arfh-ng.org/wp-content/uploads/2024/10/4-300x200.jpg 300w, https://arfh-ng.org/wp-content/uploads/2024/10/4-1024x683.jpg 1024w, https://arfh-ng.org/wp-content/uploads/2024/10/4-768x512.jpg 768w, https://arfh-ng.org/wp-content/uploads/2024/10/4-1536x1024.jpg 1536w, https://arfh-ng.org/wp-content/uploads/2024/10/4-2048x1365.jpg 2048w" sizes="(max-width: 300px) 100vw, 300px"> <img loading="lazy" decoding="async" class="alignnone size-medium wp-image-13528" src="https://arfh-ng.org/wp-content/uploads/2024/10/5-300x200.jpg" alt="" width="300" height="200" srcset="https://arfh-ng.org/wp-content/uploads/2024/10/5-300x200.jpg 300w, https://arfh-ng.org/wp-content/uploads/2024/10/5-1024x683.jpg 1024w, https://arfh-ng.org/wp-content/uploads/2024/10/5-768x512.jpg 768w, https://arfh-ng.org/wp-content/uploads/2024/10/5-1536x1024.jpg 1536w, https://arfh-ng.org/wp-content/uploads/2024/10/5-2048x1365.jpg 2048w" sizes="(max-width: 300px) 100vw, 300px"> <img loading="lazy" decoding="async" class="alignnone size-medium wp-image-13529" src="https://arfh-ng.org/wp-content/uploads/2024/10/6-300x200.jpg" alt="" width="300" height="200" srcset="https://arfh-ng.org/wp-content/uploads/2024/10/6-300x200.jpg 300w, https://arfh-ng.org/wp-content/uploads/2024/10/6-1024x683.jpg 1024w, https://arfh-ng.org/wp-content/uploads/2024/10/6-768x512.jpg 768w, https://arfh-ng.org/wp-content/uploads/2024/10/6-1536x1024.jpg 1536w, https://arfh-ng.org/wp-content/uploads/2024/10/6-2048x1365.jpg 2048w" sizes="(max-width: 300px) 100vw, 300px"> <img loading="lazy" decoding="async" class="alignnone size-medium wp-image-13530" src="https://arfh-ng.org/wp-content/uploads/2024/10/7-300x200.jpg" alt="" width="300" height="200" srcset="https://arfh-ng.org/wp-content/uploads/2024/10/7-300x200.jpg 300w, https://arfh-ng.org/wp-content/uploads/2024/10/7-1024x683.jpg 1024w, https://arfh-ng.org/wp-content/uploads/2024/10/7-768x512.jpg 768w, https://arfh-ng.org/wp-content/uploads/2024/10/7-1536x1024.jpg 1536w, https://arfh-ng.org/wp-content/uploads/2024/10/7-2048x1365.jpg 2048w" sizes="(max-width: 300px) 100vw, 300px"> <img loading="lazy" decoding="async" class="alignnone size-medium wp-image-13531" src="https://arfh-ng.org/wp-content/uploads/2024/10/8-300x200.jpg" alt="" width="300" height="200" srcset="https://arfh-ng.org/wp-content/uploads/2024/10/8-300x200.jpg 300w, https://arfh-ng.org/wp-content/uploads/2024/10/8-1024x683.jpg 1024w, https://arfh-ng.org/wp-content/uploads/2024/10/8-768x512.jpg 768w, https://arfh-ng.org/wp-content/uploads/2024/10/8-1536x1024.jpg 1536w, https://arfh-ng.org/wp-content/uploads/2024/10/8-2048x1365.jpg 2048w" sizes="(max-width: 300px) 100vw, 300px"> <img loading="lazy" decoding="async" class="alignnone size-medium wp-image-13532" src="https://arfh-ng.org/wp-content/uploads/2024/10/10-300x200.jpg" alt="" width="300" height="200" srcset="https://arfh-ng.org/wp-content/uploads/2024/10/10-300x200.jpg 300w, https://arfh-ng.org/wp-content/uploads/2024/10/10-1024x683.jpg 1024w, https://arfh-ng.org/wp-content/uploads/2024/10/10-768x512.jpg 768w, https://arfh-ng.org/wp-content/uploads/2024/10/10-1536x1024.jpg 1536w, https://arfh-ng.org/wp-content/uploads/2024/10/10-2048x1365.jpg 2048w" sizes="(max-width: 300px) 100vw, 300px"> <img loading="lazy" decoding="async" class="alignnone size-medium wp-image-13533" src="https://arfh-ng.org/wp-content/uploads/2024/10/11-300x200.jpg" alt="" width="300" height="200" srcset="https://arfh-ng.org/wp-content/uploads/2024/10/11-300x200.jpg 300w, https://arfh-ng.org/wp-content/uploads/2024/10/11-1024x683.jpg 1024w, https://arfh-ng.org/wp-content/uploads/2024/10/11-768x512.jpg 768w, https://arfh-ng.org/wp-content/uploads/2024/10/11-1536x1024.jpg 1536w, https://arfh-ng.org/wp-content/uploads/2024/10/11-2048x1365.jpg 2048w" sizes="(max-width: 300px) 100vw, 300px"> <img loading="lazy" decoding="async" class="alignnone size-medium wp-image-13534" src="https://arfh-ng.org/wp-content/uploads/2024/10/12-1-300x200.jpg" alt="" width="300" height="200" srcset="https://arfh-ng.org/wp-content/uploads/2024/10/12-1-300x200.jpg 300w, https://arfh-ng.org/wp-content/uploads/2024/10/12-1-1024x683.jpg 1024w, https://arfh-ng.org/wp-content/uploads/2024/10/12-1-768x512.jpg 768w, https://arfh-ng.org/wp-content/uploads/2024/10/12-1-1536x1024.jpg 1536w, https://arfh-ng.org/wp-content/uploads/2024/10/12-1-2048x1365.jpg 2048w" sizes="(max-width: 300px) 100vw, 300px"> <img loading="lazy" decoding="async" class="alignnone size-medium wp-image-13535" src="https://arfh-ng.org/wp-content/uploads/2024/10/13-300x200.jpg" alt="" width="300" height="200" srcset="https://arfh-ng.org/wp-content/uploads/2024/10/13-300x200.jpg 300w, https://arfh-ng.org/wp-content/uploads/2024/10/13-1024x683.jpg 1024w, https://arfh-ng.org/wp-content/uploads/2024/10/13-768x512.jpg 768w, https://arfh-ng.org/wp-content/uploads/2024/10/13-1536x1024.jpg 1536w, https://arfh-ng.org/wp-content/uploads/2024/10/13-2048x1365.jpg 2048w" sizes="(max-width: 300px) 100vw, 300px"> <img loading="lazy" decoding="async" class="alignnone size-medium wp-image-13536" src="https://arfh-ng.org/wp-content/uploads/2024/10/14-300x200.jpg" alt="" width="300" height="200" srcset="https://arfh-ng.org/wp-content/uploads/2024/10/14-300x200.jpg 300w, https://arfh-ng.org/wp-content/uploads/2024/10/14-1024x683.jpg 1024w, https://arfh-ng.org/wp-content/uploads/2024/10/14-768x512.jpg 768w, https://arfh-ng.org/wp-content/uploads/2024/10/14-1536x1024.jpg 1536w, https://arfh-ng.org/wp-content/uploads/2024/10/14-2048x1365.jpg 2048w" sizes="(max-width: 300px) 100vw, 300px"> <img loading="lazy" decoding="async" class="alignnone size-medium wp-image-13537" src="https://arfh-ng.org/wp-content/uploads/2024/10/15-300x200.jpg" alt="" width="300" height="200" srcset="https://arfh-ng.org/wp-content/uploads/2024/10/15-300x200.jpg 300w, https://arfh-ng.org/wp-content/uploads/2024/10/15-1024x683.jpg 1024w, https://arfh-ng.org/wp-content/uploads/2024/10/15-768x512.jpg 768w, https://arfh-ng.org/wp-content/uploads/2024/10/15-1536x1024.jpg 1536w, https://arfh-ng.org/wp-content/uploads/2024/10/15-2048x1365.jpg 2048w" sizes="(max-width: 300px) 100vw, 300px"> <img loading="lazy" decoding="async" class="alignnone size-medium wp-image-13538" src="https://arfh-ng.org/wp-content/uploads/2024/10/16-300x200.jpg" alt="" width="300" height="200" srcset="https://arfh-ng.org/wp-content/uploads/2024/10/16-300x200.jpg 300w, https://arfh-ng.org/wp-content/uploads/2024/10/16-1024x683.jpg 1024w, https://arfh-ng.org/wp-content/uploads/2024/10/16-768x512.jpg 768w, https://arfh-ng.org/wp-content/uploads/2024/10/16-1536x1024.jpg 1536w, https://arfh-ng.org/wp-content/uploads/2024/10/16-2048x1365.jpg 2048w" sizes="(max-width: 300px) 100vw, 300px"> <img loading="lazy" decoding="async" class="alignnone size-medium wp-image-13539" src="https://arfh-ng.org/wp-content/uploads/2024/10/17-300x200.jpg" alt="" width="300" height="200" srcset="https://arfh-ng.org/wp-content/uploads/2024/10/17-300x200.jpg 300w, https://arfh-ng.org/wp-content/uploads/2024/10/17-1024x683.jpg 1024w, https://arfh-ng.org/wp-content/uploads/2024/10/17-768x512.jpg 768w, https://arfh-ng.org/wp-content/uploads/2024/10/17-1536x1024.jpg 1536w, https://arfh-ng.org/wp-content/uploads/2024/10/17-2048x1365.jpg 2048w" sizes="(max-width: 300px) 100vw, 300px"> <img loading="lazy" decoding="async" class="alignnone size-medium wp-image-13540" src="https://arfh-ng.org/wp-content/uploads/2024/10/IMG_0025-300x200.jpg" alt="" width="300" height="200" srcset="https://arfh-ng.org/wp-content/uploads/2024/10/IMG_0025-300x200.jpg 300w, https://arfh-ng.org/wp-content/uploads/2024/10/IMG_0025-1024x683.jpg 1024w, https://arfh-ng.org/wp-content/uploads/2024/10/IMG_0025-768x512.jpg 768w, https://arfh-ng.org/wp-content/uploads/2024/10/IMG_0025-1536x1024.jpg 1536w, https://arfh-ng.org/wp-content/uploads/2024/10/IMG_0025-2048x1365.jpg 2048w" sizes="(max-width: 300px) 100vw, 300px"> <img loading="lazy" decoding="async" class="alignnone size-medium wp-image-13541" src="https://arfh-ng.org/wp-content/uploads/2024/10/IMG_0026-300x200.jpg" alt="" width="300" height="200" srcset="https://arfh-ng.org/wp-content/uploads/2024/10/IMG_0026-300x200.jpg 300w, https://arfh-ng.org/wp-content/uploads/2024/10/IMG_0026-1024x683.jpg 1024w, https://arfh-ng.org/wp-content/uploads/2024/10/IMG_0026-768x512.jpg 768w, https://arfh-ng.org/wp-content/uploads/2024/10/IMG_0026-1536x1024.jpg 1536w, https://arfh-ng.org/wp-content/uploads/2024/10/IMG_0026-2048x1365.jpg 2048w" sizes="(max-width: 300px) 100vw, 300px"> <img loading="lazy" decoding="async" class="alignnone size-medium wp-image-13523" src="https://arfh-ng.org/wp-content/uploads/2024/10/12-300x200.jpg" alt="" width="300" height="200" srcset="https://arfh-ng.org/wp-content/uploads/2024/10/12-300x200.jpg 300w, https://arfh-ng.org/wp-content/uploads/2024/10/12-1024x683.jpg 1024w, https://arfh-ng.org/wp-content/uploads/2024/10/12-768x512.jpg 768w, https://arfh-ng.org/wp-content/uploads/2024/10/12-1536x1024.jpg 1536w, https://arfh-ng.org/wp-content/uploads/2024/10/12-2048x1365.jpg 2048w" sizes="(max-width: 300px) 100vw, 300px"></div>
-</div>
+<div dir="auto" class="flex w-full h-fit p-4 gap-3 flex-wrap flex-grow">
+    <img fetchpriority="high" decoding="async" class="alignnone size-medium wp-image-13524 max-md:flex-grow flex-grow"
+     src="{{item.imagex}}" alt="" width="300" height="200" srcset="{{item.imagex}}" sizes="(max-width: 300px) 100vw, 300px" > 
+    <img fetchpriority="high" decoding="async" class="alignnone size-medium wp-image-13524 max-md:flex-grow flex-grow"
+     src="{{item.imagex1}}" alt="" width="300" height="200" srcset="{{item.imagex1}}" sizes="(max-width: 300px) 100vw, 300px" > 
+    <img fetchpriority="high" decoding="async" class="alignnone size-medium wp-image-13524 max-md:flex-grow flex-grow"
+     src="{{item.imagex2}}" alt="" width="300" height="200" srcset="{{item.imagex2}}" sizes="(max-width: 300px) 100vw, 300px" > 
+    </div>
 </div>
 <div class="elementor-element elementor-element-5e7303f7 elementor-widget elementor-widget-heading" data-id="5e7303f7" data-element_type="widget" data-widget_type="heading.default">
 <div class="elementor-widget-container">
@@ -202,68 +187,29 @@
 <h3 class="elementor-heading-title elementor-size-default">Recent Posts</h3>		</div>
 </div>
 <div class="elementor-element elementor-element-21dfff5 elementor-grid-4 elementor-grid-tablet-2 elementor-grid-mobile-1 elementor-posts--thumbnail-top elementor-widget elementor-widget-posts" data-id="21dfff5" data-element_type="widget" data-settings="{&quot;classic_columns&quot;:&quot;4&quot;,&quot;classic_columns_tablet&quot;:&quot;2&quot;,&quot;classic_columns_mobile&quot;:&quot;1&quot;,&quot;classic_row_gap&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:35,&quot;sizes&quot;:[]},&quot;classic_row_gap_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;classic_row_gap_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}" data-widget_type="posts.classic">
-<div class="elementor-widget-container">
+<div class="elementor-widget-container flex item-center justify-center flex-wrap">
 <link rel="stylesheet" href="https://arfh-ng.org/wp-content/plugins/elementor-pro/assets/css/widget-posts.min.css">		<div class="elementor-posts-container elementor-posts elementor-posts--skin-classic elementor-grid elementor-has-item-ratio">
-<article class="elementor-post elementor-grid-item post-13550 post type-post status-publish format-standard has-post-thumbnail hentry category-news-stories">
-<a class="elementor-post__thumbnail__link" href="https://arfh-ng.org/news-stories/welcome-to-the-latest-edition-of-the-beacon-arfhs-quarterly-newsletter/">
-<div class="elementor-post__thumbnail"><img loading="lazy" width="200" height="300" src="https://arfh-ng.org/wp-content/uploads/2024/10/Cover-page-for-Q3-Newsletter-1-1-200x300.jpg" class="attachment-medium size-medium wp-image-13552" alt=""></div>
+
+{% for i in news %} 
+{% if i.uuids != item.uuids %}
+    <article class="elementor-post elementor-grid-item post-13550 post type-post status-publish format-standard has-post-thumbnail hentry category-news-stories">
+<a class="elementor-post__thumbnail__link" href="{% url 'newdetail' i.uuids %}">
+<div class="elementor-post__thumbnail">
+    <img loading="lazy" width="200" height="200" src="{{i.imagex}}" class="attachment-medium size-medium wp-image-13552 h-[190px]" alt=""></div>
 </a>
 <div class="elementor-post__text">
 <h3 class="elementor-post__title">
-<a href="https://arfh-ng.org/news-stories/welcome-to-the-latest-edition-of-the-beacon-arfhs-quarterly-newsletter/">
-Welcome to the Latest Edition of&nbsp;The Beacon, ARFH’s Quarterly Newsletter!			</a>
+<a href="{% url 'newdetail' i.uuids %}">
+{{i.title}}		</a>
 </h3>
 <div class="elementor-post__meta-data">
     <span class="elementor-post-date">
-October 21, 2024		</span>
+{{i.date}}	</span>
 </div>
 </div>
-</article>
-<article class="elementor-post elementor-grid-item post-13522 post type-post status-publish format-standard has-post-thumbnail hentry category-news-stories category-project-update">
-<a class="elementor-post__thumbnail__link" href="https://arfh-ng.org/news-stories/usaid-arfh-onboards-90-beneficiaries-on-digital-skills-with-nithub-unilag/">
-<div class="elementor-post__thumbnail"><img loading="lazy" width="300" height="200" src="https://arfh-ng.org/wp-content/uploads/2024/10/12-300x200.jpg" class="attachment-medium size-medium wp-image-13523" alt=""></div>
-</a>
-<div class="elementor-post__text">
-<h3 class="elementor-post__title">
-<a href="https://arfh-ng.org/news-stories/usaid-arfh-onboards-90-beneficiaries-on-digital-skills-with-nithub-unilag/">
-USAID, ARFH Onboards 90 Beneficiaries in Digital Skills Training at NiTHub, University of Lagos			</a>
-</h3>
-<div class="elementor-post__meta-data">
-    <span class="elementor-post-date">
-October 17, 2024		</span>
-</div>
-</div>
-</article>
-<article class="elementor-post elementor-grid-item post-13499 post type-post status-publish format-standard has-post-thumbnail hentry category-news-stories category-project-update tag-dmpasc tag-empoweringwomen tag-familyplanning tag-healthycommunities tag-worldcontraceptionday tag-yobestate tag-arfh tag-codsain">
-<a class="elementor-post__thumbnail__link" href="https://arfh-ng.org/news-stories/a-glimpse-from-world-contraception-day-in-yobe-state/">
-<div class="elementor-post__thumbnail"><img loading="lazy" width="225" height="300" src="https://arfh-ng.org/wp-content/uploads/2024/09/WhatsApp-Image-2024-09-30-at-09.28.05-1-225x300.jpeg" class="attachment-medium size-medium wp-image-13505" alt=""></div>
-</a>
-<div class="elementor-post__text">
-<h3 class="elementor-post__title">
-<a href="https://arfh-ng.org/news-stories/a-glimpse-from-world-contraception-day-in-yobe-state/">
-A glimpse from World Contraception Day in Yobe State			</a>
-</h3>
-<div class="elementor-post__meta-data">
-    <span class="elementor-post-date">
-September 30, 2024		</span>
-</div>
-</div>
-</article>
-<article class="elementor-post elementor-grid-item post-13491 post type-post status-publish format-standard has-post-thumbnail hentry category-news-stories tag-dmpasc tag-empoweringwomen tag-familyplanning tag-healthycommunities tag-nigerstate tag-worldcontraceptionday tag-arfh tag-codsain">
-<a class="elementor-post__thumbnail__link" href="https://arfh-ng.org/news-stories/a-glimpse-from-world-contraception-day-in-kano-state/">
-<div class="elementor-post__thumbnail elementor-fit-height"><img loading="lazy" width="300" height="142" src="https://arfh-ng.org/wp-content/uploads/2024/09/WhatsApp-Image-2024-09-30-at-09.28.43-2-300x142.jpeg" class="attachment-medium size-medium wp-image-13494" alt=""></div>
-</a>
-<div class="elementor-post__text">
-<h3 class="elementor-post__title">
-<a href="https://arfh-ng.org/news-stories/a-glimpse-from-world-contraception-day-in-kano-state/">
-A glimpse from World Contraception Day in Kano&nbsp;State			</a>
-</h3>
-<div class="elementor-post__meta-data">
-    <span class="elementor-post-date">
-September 30, 2024		</span>
-</div>
-</div>
-</article>
+</article> 
+{% endif %}
+{% endfor %}
 </div>
 
 </div>
