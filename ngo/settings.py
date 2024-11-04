@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'rest_framework',
     "app"
 ]
+DATA_UPLOAD_MAX_MEMORY_SIZE = 10485760  # Set to 10 MB (10 * 1024 * 1024 bytes)
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

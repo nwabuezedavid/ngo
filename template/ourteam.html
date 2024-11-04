@@ -1,73 +1,371 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
 
+<link
+  rel="stylesheet"
+  id="wpo_min-header-0-css"
+  href="https://arfh-ng.org/wp-content/cache/wpo-minify/1730210395/assets/wpo-minify-header-c8521445.min.css"
+  media="all"
+/>
 
-
-{% extends 'base.html' %}
-{% load static  %}
-
-
-{% block content %}
-<div data-elementor-type="wp-page" data-elementor-id="2834" class="elementor elementor-2834" data-elementor-post-type="page">
-        <div class="flex items-center justify-center min-h-screen bg-gray-100 overflow-hidden">
-                <div class="relative w-full max-w-4xl p-4 bg-white rounded-lg shadow-lg overflow-hidden">
-                    <!-- Team Slide Container -->
-                    <div id="team-slider" class="flex transition-transform duration-500 space-x-6">
-                        <!-- Slide 1 -->
-                         {% for i in teams %}
-                        <div class="flex-shrink-0 w-64 p-4 text-center bg-gray-50 rounded-lg shadow-md">
-                            <img src="{{i.image}}" alt="Team Member 1" class="w-full flex-grow flex h-[140px] object-fill  mx-auto rounded-full" />
-                            <h3 class="mt-4 text-xl font-semibold">{{i.name}}</h3>
-                            <p class="text-gray-500">{{i.position}}</p>
-                        </div>
-                        <!-- Slide 2 -->
-                        {% endfor %}
-                        <!-- Add more slides as needed -->
-                    </div>
-                    <!-- Navigation Buttons -->
-                    <button id="prev-slide" class="absolute z-[80] left-0 p-2 ml-8 text-white bg-blue-500 rounded-full top-1/2 transform -translate-y-1/2 hover:bg-blue-600">
-                        &#8592;
-                    </button>
-                    <button id="next-slide" class="absolute z-[80] right-0 p-2 mr-8 text-white bg-blue-500 rounded-full top-1/2 transform -translate-y-1/2 hover:bg-blue-600">
-                        &#8594;
-                    </button>
-                </div>
+<div
+  data-elementor-type="wp-page"
+  data-elementor-id="2834"
+  class="elementor elementor-2834"
+  data-elementor-post-type="page"
+>
+  <section
+    data-particle_enable="true"
+    class="eael-section-particles-47c43fe elementor-section elementor-top-section elementor-element elementor-element-47c43fe elementor-section-boxed elementor-section-height-default elementor-section-height-default eael-particles-section"
+    data-eael_ptheme_source="presets"
+    data-preset_theme="nasa"
+    data-custom_style=""
+    data-particle-mobile-disabled="false"
+    data-id="47c43fe"
+    data-element_type="section"
+    data-settings='{"background_background":"classic"}'
+    id="eael-section-particles-47c43fe"
+  >
+    <div class="elementor-background-overlay"></div>
+    <div class="elementor-container elementor-column-gap-default">
+      <div
+        class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-dfb9835"
+        data-id="dfb9835"
+        data-element_type="column"
+      >
+        <div class="elementor-widget-wrap elementor-element-populated">
+          <div
+            class="elementor-element elementor-element-495f1ba elementor-widget elementor-widget-heading animated fadeInDown"
+            data-id="495f1ba"
+            data-element_type="widget"
+            data-settings='{"_animation":"fadeInDown","_animation_delay":300}'
+            data-widget_type="heading.default"
+          >
+            <div class="elementor-widget-container">
+              <h1 class="elementor-heading-title elementor-size-default">
+                Our Team
+              </h1>
             </div>
-<script>
-const teamSlider = document.getElementById("team-slider");
-const nextSlide = document.getElementById("next-slide");
-const prevSlide = document.getElementById("prev-slide");
-
-let currentSlide = 0;
-const slideWidth = 256; // Width of each slide element (adjust if necessary)
-const totalSlides = teamSlider.children.length - 1; // Last index of slides
-
-// Function to update the visibility of navigation buttons
-function updateNavigationButtons() {
-    prevSlide.style.display = currentSlide === 0 ? "none" : "block";
-    nextSlide.style.display = currentSlide === totalSlides ? "none" : "block";
-}
-
-// Initial button state
-updateNavigationButtons();
-
-// Event listener for Next Slide button
-nextSlide.addEventListener("click", () => {
-    if (currentSlide < totalSlides) {
-        currentSlide++;
-        teamSlider.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
-        updateNavigationButtons();
+          </div>
+          <div
+            class="elementor-element elementor-element-42fe1da elementor-widget elementor-widget-text-editor"
+            data-id="42fe1da"
+            data-element_type="widget"
+            data-widget_type="text-editor.default"
+          >
+            <div class="elementor-widget-container">
+              <p><em>The People Making Things Work</em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <canvas
+      class="particles-js-canvas-el"
+      width="1894"
+      height="604"
+      style="width: 100%; height: 100%"
+    ></canvas>
+  </section>
+  <style>
+    .elementor-element-47c43fe.eael-particles-section > canvas {
+      z-index: -1;
+      position: absolute;
+      top: 0;
     }
-});
+  </style>
+  <main class="flex w-full flex-wrap item-center justify-center">
+    <section
+      data-particle_enable="false"
+      data-particle-mobile-disabled="false"
+      class="elementor-section elementor-top-section elementor-element elementor-element-2be614d elementor-hidden-tablet elementor-hidden-phone elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+      data-id="2be614d"
+      data-element_type="section"
+      data-settings='{"background_background":"classic"}'
+    >
+      <div
+        class="elementor-container elementor-column-gap-default flex flex-wrap gap-2"
+      >
+        {% for i in teams %}
 
-// Event listener for Previous Slide button
-prevSlide.addEventListener("click", () => {
-    if (currentSlide > 0) {
-        currentSlide--;
-        teamSlider.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
-        updateNavigationButtons();
-    }
-});
+        <div
+          class="make-column-clickable-elementor  elementor-column  elementor-col-25 elementor-top-column elementor-element elementor-element-b0d2632 animated fadeInLeft"
+          style="cursor: pointer"
+          data-column-clickable-blank="_self"
 
-</script>            
+          data-id="b0d2632"
+          data-element_type="column"
+          data-settings='{"background_background":"classic","animation":"fadeInLeft","animation_delay":600}'
+        >
+        <div class="elementor-widget-wrap elementor-element-populated relative" style="background-image: url('{{i.image}}') !important;">
+            <div class="elementor-background-overlay"></div>
+            <div
+              class="elementor-element elementor-element-9ee27d2 elementor-widget elementor-widget-heading"
+              data-id=""
+              data-element_type="widget"
+              data-widget_type="heading.default"
+            >
+              <div class="elementor-widget-container">
+                <h1 class="elementor-heading-title elementor-size-default">
+                  {{i.name}}
+                </h1>
+              </div>
+            </div>
+            <div
+              class="elementor-element elementor-element-4cf99cc elementor-widget elementor-widget-text-editor"
+              data-id="4cf99cc"
+              data-element_type="widget"
+              data-widget_type="text-editor.default"
+            >
+              <div class="elementor-widget-container">
+                <p>PHD, MPH, FWACN</p>
+              </div>
+            </div>
+            <div
+              class="elementor-element elementor-element-9492148 elementor-widget elementor-widget-text-editor"
+              data-id="9492148"
+              data-element_type="widget"
+              data-widget_type="text-editor.default"
+            >
+              <div class="elementor-widget-container">
+                <p>{{i.position}} <br />{{site.name}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+        <div
+          class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-efbf786 animated fadeInUp"
+          data-id="efbf786"
+          data-element_type="column"
+          data-settings='{"background_background":"classic","animation":"fadeInUp","animation_delay":400}'
+        >
+          <div class="elementor-widget-wrap elementor-element-populated">
+            <div class="elementor-background-overlay"></div>
+            <div
+              class="elementor-element elementor-element-82bee9c elementor-widget elementor-widget-heading"
+              data-id="82bee9c"
+              data-element_type="widget"
+              data-widget_type="heading.default"
+            >
+              <div class="elementor-widget-container">
+                <h2 class="elementor-heading-title elementor-size-default">
+                  They Are Saving Lives Today
+                </h2>
+              </div>
+            </div>
+            <div
+              class="elementor-element elementor-element-1f46dbc elementor-widget elementor-widget-text-editor"
+              data-id="1f46dbc"
+              data-element_type="widget"
+              data-widget_type="text-editor.default"
+            >
+              <div class="elementor-widget-container">
+                <p>Join them and see what you too can do.</p>
+              </div>
+            </div>
+            <div
+              class="elementor-element elementor-element-42043d9 elementor-align-left elementor-widget elementor-widget-button animated fadeInDown"
+              data-id="42043d9"
+              data-element_type="widget"
+              data-settings='{"_animation":"fadeInDown","_animation_delay":700}'
+              data-widget_type="button.default"
+            >
+              <div class="elementor-widget-container">
+                <div class="elementor-button-wrapper">
+                  <a
+                    class="elementor-button elementor-button-link elementor-size-sm"
+                    href="{% url 'partner' %}"
+                  >
+                    <span class="elementor-button-content-wrapper">
+                      <span class="elementor-button-text">Partner Now</span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <section
+    data-particle_enable="false"
+    data-particle-mobile-disabled="false"
+    class="elementor-section elementor-top-section elementor-element elementor-element-f3c1b9c elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-phone elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+    data-id="f3c1b9c"
+    data-element_type="section"
+    data-settings='{"background_background":"classic"}'
+  >
+    <div class="elementor-background-overlay"></div>
+    <div class="elementor-container elementor-column-gap-default">
+      <div
+        class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-488abf3"
+        data-id="488abf3"
+        data-element_type="column"
+      >
+        <div class="elementor-widget-wrap elementor-element-populated">
+          <div
+            class="elementor-element elementor-element-09a0cd4 elementor-invisible elementor-widget elementor-widget-heading"
+            data-id="09a0cd4"
+            data-element_type="widget"
+            data-settings='{"_animation":"fadeInDown"}'
+            data-widget_type="heading.default"
+          >
+            <div class="elementor-widget-container">
+              <h2 class="elementor-heading-title elementor-size-default">
+                What People Think About Us
+              </h2>
+            </div>
+          </div>
+          <section
+            data-particle_enable="false"
+            data-particle-mobile-disabled="false"
+            class="elementor-section elementor-inner-section elementor-element elementor-element-fc63331 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+            data-id="fc63331"
+            data-element_type="section"
+          >
+            <div class="elementor-container elementor-column-gap-default">
+              <div
+                class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-53af0bc elementor-invisible"
+                data-id="53af0bc"
+                data-element_type="column"
+                data-settings='{"background_background":"classic","animation":"fadeInLeft"}'
+              >
+                <div class="elementor-widget-wrap elementor-element-populated">
+                  <div
+                    class="elementor-element elementor-element-477ff13 elementor-widget elementor-widget-image"
+                    data-id="477ff13"
+                    data-element_type="widget"
+                    data-widget_type="image.default"
+                  >
+                    <div class="elementor-widget-container">
+                      <img
+                        decoding="async"
+                        width="25"
+                        height="19"
+                        src="https://arfh-ng.org/wp-content/uploads/2019/10/quote.png"
+                        class="attachment-large size-large wp-image-40"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="elementor-element elementor-element-156652d elementor-widget elementor-widget-text-editor"
+                    data-id="156652d"
+                    data-element_type="widget"
+                    data-widget_type="text-editor.default"
+                  >
+                    <div class="elementor-widget-container">
+                      <p>
+                        Lorem ipsum dolor sit amet, elit, do eiusmod tempor
+                        incididunt ut et dolore aliqua.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="elementor-element elementor-element-dd9c251 elementor-widget elementor-widget-heading"
+                    data-id="dd9c251"
+                    data-element_type="widget"
+                    data-widget_type="heading.default"
+                  >
+                    <div class="elementor-widget-container">
+                      <h2
+                        class="elementor-heading-title elementor-size-default"
+                      >
+                        <a href="#">Karen Robinson</a>
+                      </h2>
+                    </div>
+                  </div>
+                  <div
+                    class="elementor-element elementor-element-5c7b370 elementor-widget elementor-widget-text-editor"
+                    data-id="5c7b370"
+                    data-element_type="widget"
+                    data-widget_type="text-editor.default"
+                  >
+                    <div class="elementor-widget-container">
+                      <p>Manager</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-d08bfff elementor-invisible"
+                data-id="d08bfff"
+                data-element_type="column"
+                data-settings='{"background_background":"classic","animation":"fadeInRight"}'
+              >
+                <div class="elementor-widget-wrap elementor-element-populated">
+                  <div
+                    class="elementor-element elementor-element-3a85ffc elementor-widget elementor-widget-image"
+                    data-id="3a85ffc"
+                    data-element_type="widget"
+                    data-widget_type="image.default"
+                  >
+                    <div class="elementor-widget-container">
+                      <img
+                        decoding="async"
+                        width="25"
+                        height="19"
+                        src="https://arfh-ng.org/wp-content/uploads/2019/10/quote.png"
+                        class="attachment-large size-large wp-image-40"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="elementor-element elementor-element-24e4da1 elementor-widget elementor-widget-text-editor"
+                    data-id="24e4da1"
+                    data-element_type="widget"
+                    data-widget_type="text-editor.default"
+                  >
+                    <div class="elementor-widget-container">
+                      <p>
+                        Lorem ipsum dolor sit amet, elit, do eiusmod tempor
+                        incididunt ut et dolore aliqua.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="elementor-element elementor-element-7258a8e elementor-widget elementor-widget-heading"
+                    data-id="7258a8e"
+                    data-element_type="widget"
+                    data-widget_type="heading.default"
+                  >
+                    <div class="elementor-widget-container">
+                      <h2
+                        class="elementor-heading-title elementor-size-default"
+                      >
+                        <a href="#">Rita Patterson</a>
+                      </h2>
+                    </div>
+                  </div>
+                  <div
+                    class="elementor-element elementor-element-0d86788 elementor-widget elementor-widget-text-editor"
+                    data-id="0d86788"
+                    data-element_type="widget"
+                    data-widget_type="text-editor.default"
+                  >
+                    <div class="elementor-widget-container">
+                      <p>Teacher</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div
+    data-particle_enable="false"
+    data-particle-mobile-disabled="false"
+    class="elementor-element elementor-element-8a3b989 e-flex e-con-boxed e-con e-parent e-lazyloaded"
+    data-id="8a3b989"
+    data-element_type="container"
+  >
+    <div class="e-con-inner"></div>
+  </div>
 </div>
 
 {% endblock content %}

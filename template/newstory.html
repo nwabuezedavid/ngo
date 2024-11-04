@@ -10,7 +10,7 @@
       data-elementor-id="7512"
       class="elementor elementor-7512"
       data-elementor-post-type="page"
-    >
+    ><link rel="stylesheet" id="wpo_min-header-0-css" href="https://arfh-ng.org/wp-content/cache/wpo-minify/1730210395/assets/wpo-minify-header-c0a4e545.min.css" media="all">
       <section
         data-particle_enable="true"
         class="eael-section-particles-24c742a elementor-section elementor-top-section elementor-element elementor-element-24c742a elementor-section-height-min-height elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-items-middle eael-particles-section"
@@ -242,7 +242,7 @@
                                   </style>
                                   <div class="elementor-spacer mt-4">
                                     <div class="elementor-spacer-inner  ">
-										<img src="{{i.imagex}}" class="w-full h-full object-fit" alt="">
+										<img src="{{i.imagex}}" class="w-full h-[160px] object-fit" alt="">
 									</div>
                                   </div>
                                 </div>
@@ -293,7 +293,7 @@
                                       display: inline-block;
                                     }
                                   </style>
-                                  Category: <span>{{i.label}}</span>
+                                  Category: <span>{{i.label}} ({{i.date}})</span>
                                 </div>
                               </div>
                             </div>
@@ -313,7 +313,7 @@
                                 data-widget_type="text-editor.default"
                               >
                                 <div class="elementor-widget-container">
-                                  Category: <span>{{i.label}}</span>
+                                  Category: <span>{{i.label}} ({{i.date}})</span>
                                 </div>
                               </div>
                               <div
@@ -324,7 +324,7 @@
                               >
                                 <div class="elementor-widget-container">
                                   <h2
-                                    class="elementor-heading-title elementor-size-default"
+                                    class="elementor-heading-title elementor-size-default mb-4 p-3"
                                   >
                                     <a href="{% url 'newdetail' i.uuids %}"
                                       >{{i.title}}</a
@@ -339,7 +339,7 @@
                                 data-widget_type="text-editor.default"
                               >
                                 <div class="elementor-widget-container">
-                                  {{i.date}}
+                                  
                                 </div>
                               </div>
                               <div
@@ -359,7 +359,7 @@
                                 data-settings='{"headline_style":"rotate","animation_type":"drop-in","loop":"yes","rotate_iteration_delay":2500}'
                                 data-widget_type="animated-headline.default"
                               >
-                                <div class="elementor-widget-container">
+                                <div class="elementor-widget-container flex flex-col gap-2">
                                   <link
                                     rel="stylesheet"
                                     href="https://arfh-ng.org/wp-content/plugins/elementor-pro/assets/css/widget-animated-headline.min.css"
@@ -396,22 +396,7 @@
 
                 {% endfor F%}
               </div>
-              <nav
-                class="elementor-pagination"
-                role="navigation"
-                aria-label="Pagination"
-              >
-                <span class="page-numbers prev">« Previous</span>
-                <span aria-current="page" class="page-numbers current"
-                  ><span class="elementor-screen-only">Page</span>1</span
-                >
-
-                <a
-                  class="page-numbers next"
-                  href="https://arfh-ng.org/news-and-stories/2/"
-                  >Next »</a
-                >
-              </nav>
+               
             </div>
           </div>
         </div>
